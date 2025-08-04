@@ -5,6 +5,7 @@ dotenv.config();
 
 // routes
 import userRouter from "./routes/user.routes.js";
+import authRouter from "./routes/auth.routes.js";
 
 const app = express();
 app.use(express.json());
@@ -24,3 +25,4 @@ app.listen(3000, () => {
 
 // api routes
 app.use("/api/user", userRouter);
+app.use("/api/auth", authRouter);
